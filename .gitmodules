@@ -23,3 +23,6 @@
 [submodule "libraries/Protobufs"]
 	path = libraries/Protobufs
 	url = https://github.com/SteamDatabase/Protobufs
+[submodule "libraries/sourcehook"]
+	path = libraries/sourcehook
+	url = https://github.com/e54385991/sourcehook.git
