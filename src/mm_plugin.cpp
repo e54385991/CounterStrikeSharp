@@ -75,6 +75,11 @@ class GameSessionConfiguration_t
 
 PLUGIN_EXPOSE(CounterStrikeSharpMMPlugin, counterstrikesharp::gPlugin);
 
+// Metamod's PLUGIN_EXPOSE macro stopped defining this when Metamod:Source moved
+// from SourceHook to KHook internally. Our vendored SourceHook copy (used for our
+// own hooking, independent of Metamod's hook manager) still expects it to exist.
+SourceHook::ISourceHook* g_SHPtr = nullptr;
+
 namespace counterstrikesharp {
 
 SH_DECL_HOOK3_void(IServerGameDLL, GameFrame, SH_NOATTRIB, 0, bool, bool, bool);
